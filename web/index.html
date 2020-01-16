@@ -328,8 +328,11 @@
 
     function httpError(displayId) {
       return function(data) {
+        console.log(data)
         appendResponse(displayId, 'error<br/>', true)
-        appendResponse(displayId, 'http error: ' + data.status + ' - ' + data.responseText, true)
+        if(typeof data.status != 'undefined'){
+          appendResponse(displayId, 'http error: ' + data.status + ' - ' + data.responseText, true)
+        }
       }
     }
 
