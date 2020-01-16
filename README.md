@@ -1,1 +1,1 @@
-# webauthn-cli
+# webauthn-shell
